@@ -1,7 +1,7 @@
 # ComfyUI 工作台 · 首次配置向导
 
 **装好 → 打开 → 填显卡和内存 → 拿到一份「你这台机器该下哪些模型、装哪些插件、导入哪几份工作流」的清单，
-外加一段可以直接丢给你的 AI Agent 去执行的安装提示词。**
+此外还有一段可以直接交给你的 AI Agent 执行的安装提示词。**
 
 零依赖（只用 Node 内置模块），不需要 `npm install`，不联网上传任何东西。
 
@@ -9,15 +9,28 @@
 
 ## 下载
 
-点上面文件列表里的 **`comfyui-workbench.zip`** → 右侧 **Download raw file** → 解压到任意位置。
+**[⬇ 下载 comfyui-workbench.zip](https://github.com/115166657/comfyui-workbench/raw/main/comfyui-workbench.zip)**
 
-> 想用 Git 的话：`git clone` 下来的也是这个 zip，解压即可。
+下载后解压到任意位置即可。历史版本见 [Releases](../../releases)。
+
+---
+
+## 先看这三份对照表（不用下载）
+
+装之前值得先扫一眼，看你的机器该下什么、要装什么：
+
+| 文档 | 内容 |
+|---|---|
+| [模型与显存对照表](docs/模型与显存对照表.md) | 49 个权重条目：放到哪个目录、多大、什么档位、哪里下 |
+| [插件清单](docs/插件清单.md) | 21 个 ComfyUI 插件：提供哪些节点、依赖什么、为什么需要 |
+| [工作流总表](docs/工作流总表.md) | 26 份图各自的目标、最低档位、引用权重 |
+| [常见问题](docs/常见问题.md) | 踩过的坑：显存、目录名、插件冲突 |
 
 ---
 
 ## 快速开始
 
-需要 **Node.js 18 或更高版本**（[下载](https://nodejs.org/)）。除此之外什么都不用装。
+需要**Node.js 18 或更高版本（【下载】）。除此之外什么都不用装。
 
 1. 解压 `comfyui-workbench.zip`
 2. **Windows**：双击目录里的 `启动工作台.cmd`
@@ -113,14 +126,7 @@ node tools/cli.mjs install --comfy "D:\ComfyUI\ComfyUI" --dry    # 先试算
 | `catalog/` | 硬件档位、权重注记、插件注记、工作流注记 |
 | `workflows/` | 26 份工作流 JSON + `api/`（无头调用）+ `optional-r18/`（成人内容，默认不装） |
 | `tools/` | 扫描、生成、校验、冒烟测试、CLI |
-| `docs/` | 自动生成的对照表 + 常见问题 |
-
-`docs/` 里有三份自动生成的对照表，装之前值得先扫一眼：
-
-- `docs/模型与显存对照表.md` —— 49 个权重条目：放到哪、多大、什么档位、哪里下
-- `docs/插件清单.md` —— 21 个 ComfyUI 插件：提供哪些节点、依赖什么、为什么需要
-- `docs/工作流总表.md` —— 26 份图各自的目标、档位、引用权重
-- `docs/常见问题.md` —— 踩过的坑
+| `docs/` | 对照表与常见问题（仓库里已经能直接看，不用解压） |
 
 ### ⚠️ 关于 18+ 内容
 
@@ -132,7 +138,7 @@ node tools/cli.mjs install --comfy "D:\ComfyUI\ComfyUI" --dry    # 先试算
 ## 命令参考
 
 ```bash
-node server/server.mjs [--port 8030] [--no-open]   # 起服务
+node server/server.mjs [--port 8030] [--no-open] # 启动服务
 node tools/cli.mjs probe                           # 探测硬件
 node tools/cli.mjs plan   --vram 8 --ram 16 --goals video,image [--r18] [--disk 100]
 node tools/cli.mjs prompt --vram 8 --ram 16 --goals video [--out file.md]
@@ -163,7 +169,7 @@ node tools/smoke-test.mjs                          # 冒烟测试（62 项断言
 
 ## 许可与第三方内容
 
-工作台本体是 MIT。
+工作台本体是 [MIT](LICENSE)。
 
 随包分发的**工作流 JSON 来自第三方整合包与作者自用版本**，仅作「按图索骥的下模型清单」用途分发，
 **本身不含任何模型权重**。其中的第三方 LoRA / 模型文件名、以及工作流里出现的外部链接
