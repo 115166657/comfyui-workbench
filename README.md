@@ -1,7 +1,7 @@
 # ComfyUI 工作台 · 首次配置向导
 
 **装好 → 打开 → 填显卡和内存 → 拿到一份「你这台机器该下哪些模型、装哪些插件、导入哪几份工作流」的清单，
-此外还有一段可以直接交给你的 AI Agent 执行的安装提示词。**
+外加一段可以直接丢给你的 AI Agent 去执行的安装提示词。**
 
 零依赖（只用 Node 内置模块），不需要 `npm install`，不联网上传任何东西。
 
@@ -30,7 +30,7 @@
 
 ## 快速开始
 
-需要**Node.js 18 或更高版本（【下载】）。除此之外什么都不用装。
+需要 **Node.js 18 或更高版本**（[下载](https://nodejs.org/)）。除此之外什么都不用装。
 
 1. 解压 `comfyui-workbench.zip`
 2. **Windows**：双击目录里的 `启动工作台.cmd`
@@ -138,7 +138,7 @@ node tools/cli.mjs install --comfy "D:\ComfyUI\ComfyUI" --dry    # 先试算
 ## 命令参考
 
 ```bash
-node server/server.mjs [--port 8030] [--no-open] # 启动服务
+node server/server.mjs [--port 8030] [--no-open]   # 起服务
 node tools/cli.mjs probe                           # 探测硬件
 node tools/cli.mjs plan   --vram 8 --ram 16 --goals video,image [--r18] [--disk 100]
 node tools/cli.mjs prompt --vram 8 --ram 16 --goals video [--out file.md]
