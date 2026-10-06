@@ -1,33 +1,21 @@
 MIT License
 
-版权所有 © 2026 comfyui-workbench 贡献者
+Copyright (c) 2026 comfyui-workbench contributors
 
-特此免费授予任何获取本软件副本的人
-及其相关文档文件（以下简称“软件”）的使用权限，以进行处理
-在软件中不受限制，包括但不限于权利
-使用、复制、修改、合并、发布、分发、再许可和/或销售
-软件副本，并允许获得该软件的人
-在满足以下条件的情况下，可按要求提供：
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-上述版权声明和本许可声明应包含于所有
-软件的副本或其重要部分中。
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-本软件按原样提供，不提供任何形式的明示或暗示担保，包括但不限于适销性、特定用途适用性和非侵权性的担保。
-包括但不限于对适销性、特定用途适用性和非侵权性的担保。
-在任何情况下，均不对……承担责任。
-作者或版权持有者对任何索赔、损害或其他
-责任，无论是在合同之诉、侵权之诉还是其他诉讼中，均应承担责任，该责任源于
-软件的使用或与软件相关的任何行为，或因使用或与软件相关的任何行为而产生
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-关于随仓库分发的工作流 JSON（workflows/ 目录）：
-
-这些文件来自第三方整合包与作者自用版本，仅作「按图索骥的下模型清单」用途分发。
-它们本身不包含任何模型权重。其中的第三方 LoRA / 模型文件名、以及工作流里出现的
-外部链接（HuggingFace、夸克网盘、B 站等）版权与内容责任均归原作者。
-使用前请自行确认来源合法、并遵守对应平台的服务条款。
-
-workflows/optional-r18/ 目录下的工作流引用成人内容模型，仅向已确认年龄与当地法律
-允许的用户提供，默认不会被安装脚本复制。
